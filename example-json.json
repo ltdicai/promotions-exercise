@@ -1,0 +1,29 @@
+[
+    {
+        "product_id": 201,
+        "product_name": "Monty Python's The Meaning of Life",
+        "product_description": "A funny movie", 
+        "price": 40.0,
+        "currency": "USD",
+        "discount": 20.0, 
+        "shipping_discount": 0.0
+    },
+    {
+        "product_id": 202,
+        "product_name": "Monty Python's Life of Brian",
+        "product_description": "An even funnier movie",
+        "price": 40.0,
+        "currency": "USD",
+        "discount": 0.0, 
+        "shipping_discount": 5.0
+    },
+    {
+        "product_id": 203,
+        "product_name": "Anaconda",
+        "product_description": "A scary movie",
+        "price": 30.0,
+        "currency": "USD",
+        "discount": 10.0,
+        "shipping_discount": 0.0
+    }
+]

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Promotions{% endblock %}
+{% block content %}
+{% if not promotions|length %}
+<p>There are no promotions... yet. <a href="/promotions/upload"> Upload some!</a></p>
+{% else %}
+<table>
+	<thead>
+		<tr>
+			<th>Product ID</th>
+			<th>Product name</th>
+			<th>Product description</th>
+			<th>Price</th>
+			<th>Discount</th>
+			<th>Shipping discount</th>
+			<th>Valid from</th>
+			<th>Valid until</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for promotion in promotions %}
+	<tr>
+		<td>{{ promotion.product.id }}</td>
+		<td>{{ promotion.product.name }}</td>
+		<td>{{ promotion.product.description }}</td>
+		<td>${{ promotion.product.price }} {{promotion.product.currency}}</td>
+		<td>{{ promotion.discount}}%</td>
+		<td>{{ promotion.shipping_discount }}%</td>
+		<td>{{ promotion.valid_from }}</td>
+		<td>{{ promotion.valid_until }}</td>
+	</tr>
+	{% endfor %}
+	</tbody>
+</table>
+{% endif %}
+{% endblock %}

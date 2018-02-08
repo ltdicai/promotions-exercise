@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block content %}
+	<div class="title" style="align: center">
+		<h1>Promotions Exercise</h1>
+	</div>
+	<div style="width: 90%">
+		<h2> Available endpoints</h2>
+		<ul>
+			<li>GET <a href="/">/ (Current page)</a></li>
+			<li>GET <a href="/promotions">/promotions (List promotions)</a></li>
+			<li>GET <a href="/promotions?json">/promotions?json (List promotions as JSON)</a></li>
+			<li>GET <a href="/promotions/upload">/promotions/upload (Upload promotions via file upload)</a></li>
+			<li>POST /promotions/upload {"fileURL": &lt;fileURL&gt;, "fileType": &lt;fileType&gt;} (Upload promotions using URL) (Use cURL) </li>
+			<li>GET <a href="/clear">/clear (Clear database)</a></li>
+		</ul>
+	</div>
+{% endblock %}
+{% block footer %}
+<p><a href="https://github.com/ltdicai">Github</a></p>
+{% endblock %}
+
